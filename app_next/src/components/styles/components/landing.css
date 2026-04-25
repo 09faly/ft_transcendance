@@ -1,0 +1,162 @@
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 60px;
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.auth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 25px 40px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 3px solid;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.1;
+  transition: left 0.6s;
+}
+
+.auth-btn:hover::before {
+  left: 100%;
+}
+
+.signin-btn {
+  border-color: var(--orange);
+  color: var(--orange);
+  box-shadow: 0 0 30px rgba(183, 126, 34, 0.3);
+}
+
+.signin-btn:hover {
+  background: rgba(0, 217, 255, 0.1);
+  border-color: var(--orange);
+  box-shadow: 0 0 50px rgba(255, 196, 0, 0.859);
+  transform: translateX(10px) scale(1.02);
+}
+
+.signup-btn {
+  border-color: var(--neon-pink);
+  color: var(--neon-pink);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.3);
+}
+
+.signup-btn:hover {
+  background: rgba(255, 0, 110, 0.1);
+  border-color: var(--neon-pink);
+  box-shadow: 0 0 50px rgba(255, 0, 111, 0.947);
+  transform: translateX(10px) scale(1.02);
+}
+
+.auth-btn:hover .btn-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+}
+
+.btn-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: center;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px currentColor;
+}
+/* ========== LEGAL PAGES (Privacy / Terms) ========== */
+
+.legal-page {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(10, 14, 39, 0.85);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  color: var(--menu-text);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.legal-page h1 {
+  font-size: 2rem;
+  color: var(--neon-blue);
+  text-align: center;
+  margin-bottom: 8px;
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.4);
+}
+
+.legal-updated {
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+.legal-page section {
+  margin-bottom: 24px;
+}
+
+.legal-page h2 {
+  font-size: 1.1rem;
+  color: var(--orange);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.legal-page p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.legal-page ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.legal-page li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+/* Legal consent text in signup */
+.legal-consent {
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.6;
+  margin-top: 12px;
+  line-height: 1.5;
+}

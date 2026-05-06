@@ -1,10 +1,16 @@
+![img1](img/img1.png)
+![img2](img/img2.png)
+![img3](img/img3.png)
+![img4](img/img4.png)
+![img5](img/img5.png)
+
 *This project has been created as part of the 42 curriculum by harakoto, kralison, frakotov, trasamiz, aandriam.*
 
 # ft_transcendence
 
 ## Description
 
-**ft_transcendence** is a full-stack web application featuring a real-time multiplayer 3D tank battle game. Players can register, customize their tanks, challenge people, chat in real-time, and compete on a global leaderboard. The project is built with Next.js (TypeScript), Prisma ORM, PostgreSQL, Socket.IO, and Three.js, all deployed via Docker with a hardened security stack (Nginx + ModSecurity WAF + HashiCorp Vault).
+**ft_transcendence** is a full-stack web application featuring a real-time multiplayer 3D tank battle game. Players can register, customize their tanks, challenge people, chat in real-time, and com[...]
 
 ### Key Features
 
@@ -253,16 +259,16 @@ RESTful API at `/api/public/*` with API key authentication , rate limiting (100 
 Prisma ORM provides type-safe database access, schema management, and migrations for PostgreSQL. Implemented by harakoto , frakotov.
 
 **Web - Notifications (Minor, 1pt)**
-In-app notification system supporting friend requests, message alerts, and game events. Stored in database with read/unread state. Full CRUD: creation via `createNotification()` in friend routes, update (mark as read) via PUT, deletion via DELETE endpoint. Implemented by harakoto.
+In-app notification system supporting friend requests, message alerts, and game events. Stored in database with read/unread state. Full CRUD: creation via `createNotification()` in friend routes,[...]
 
 **Web - PWA (Minor, 1pt)**
 Progressive Web App with `manifest.json`, service worker (`sw.js`), and installability support. Implemented by harakoto.
 
 **Web - Design System (Minor, 1pt)**
-11 reusable components: auth, buttons, dasboard, decorations, frb,friendsClients, landing, leaderboard, mode_selection, navigation, privateChat, animations, base, responsive, variables. Implemented by frakotov.
+11 reusable components: auth, buttons, dasboard, decorations, frb,friendsClients, landing, leaderboard, mode_selection, navigation, privateChat, animations, base, responsive, variables. Implement[...]
 
 **User Management (Major, 2pts)**
-Email/password authentication with bcrypt hashing, JWT sessions via NextAuth.js, profile updates, avatar support, friend system with online status, single-session enforcement. Implemented by harakoto.
+Email/password authentication with bcrypt hashing, JWT sessions via NextAuth.js, profile updates, avatar support, friend system with online status, single-session enforcement. Implemented by hara[...]
 
 **User Management - Game Stats (Minor, 1pt)**
 XP tracking, win/loss records, kill/death stats, game history with match details, sortable leaderboard. Implemented by frakotov, aandriam.
@@ -277,14 +283,14 @@ Nginx with ModSecurity (OWASP CRS) as WAF, HashiCorp Vault managing all secrets 
 Tank color selection, traning mode with AI bot opponent that simulates human-like behavior. Implemented by aandriam, kralison.
 
 **Gaming - Gamification (Minor, 1pt)**
-XP/level system, persistent game statistics (wins, kills, deaths, gamesPlayed), sortable leaderboard, and GameHistory model. **Note**: The data model and UI are fully implemented, but the post-game persistence (updating XP/wins in database after multiplayer matches) is not yet wired in `tankServer.js`. The leaderboard and stats display work correctly with existing data. Implemented by frakotov, aandriam.
+XP/level system, persistent game statistics (wins, kills, deaths, gamesPlayed), sortable leaderboard, and GameHistory model. **Note**: The data model and UI are fully implemented, but the post-ga[...]
 
 
 **Data Management - Export/Import (Minor, 1pt)**
-Multi-format export (JSON, CSV, XML) with async processing. Import with file validation, preview, conflict resolution, and error reporting. Bulk operations with multi-select UI and progress tracking. Implemented by trasamiz.
+Multi-format export (JSON, CSV, XML) with async processing. Import with file validation, preview, conflict resolution, and error reporting. Bulk operations with multi-select UI and progress track[...]
 
 **GDPR - Data Portability & Deletion (Minor, 1pt)**
-Data request system with cooldown, async processing, and expiring download links. Account deletion with confirmation and grace period. Confirmation emails for all data operations. Note: Email service and async queue wiring pending. Implemented by trasamiz.
+Data request system with cooldown, async processing, and expiring download links. Account deletion with confirmation and grace period. Confirmation emails for all data operations. Note: Email ser[...]
 ---
 
 ## Individual Contributions
